@@ -4,35 +4,12 @@ import numpy as np
 import pandas as pd
 import shap
 import matplotlib.pyplot as plt
-
+import catboost
 # Load the model
 model = joblib.load('catboost_model.pkl')
 
-# Define feature options
-cp_options = {
-    1: 'Typical angina (1)',
-    2: 'Atypical angina (2)',
-    3: 'Non-anginal pain (3)',
-    4: 'Asymptomatic (4)'
-}
 
-restecg_options = {
-    0: 'Normal (0)',
-    1: 'ST-T wave abnormality (1)',
-    2: 'Left ventricular hypertrophy (2)'
-}
 
-slope_options = {
-    1: 'Upsloping (1)',
-    2: 'Flat (2)',
-    3: 'Downsloping (3)'
-}
-
-thal_options = {
-    1: 'Normal (1)',
-    2: 'Fixed defect (2)',
-    3: 'Reversible defect (3)'
-}
 
 # Define feature names
 feature_names = [
