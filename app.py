@@ -63,7 +63,7 @@ features = np.array([feature_values])
 
 if st.button("Predict"):
     # Predict class and probabilities
-    predicted_proba = model.predict_proba(input)[0][1]
+    predicted_proba = model.predict_proba(features)[0][1]
 
     # Display prediction results
     st.write(f"**Prediction Probabilities:** {predicted_proba}")
