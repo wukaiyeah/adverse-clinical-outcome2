@@ -49,10 +49,10 @@ st.title("Adverse Clinical Outcome")
 Gestational_age = st.number_input("Gestational_age:", min_value=0, max_value=120, value=50)
 
 # sex: categorical selection
-Maternal_age = st.selectbox("Maternal_age:",  min_value=0, max_value=120, value=50)
+Maternal_age = st.number_input("Maternal_age:",  min_value=0, max_value=120, value=50)
 
 # cp: categorical selection
-Gravidity = st.selectbox("Gravidity:", min_value=0, max_value=120, value=50)
+Gravidity = st.number_input("Gravidity:", min_value=0, max_value=120, value=50)
 
 # trestbps: numerical input
 Parturition = st.number_input("Parturition:", min_value=0, max_value=120, value=50)
