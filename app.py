@@ -55,28 +55,31 @@ Maternal_age = st.selectbox("Maternal_age:",  min_value=0, max_value=120, value=
 Gravidity = st.selectbox("Gravidity:", min_value=0, max_value=120, value=50)
 
 # trestbps: numerical input
+Parturition = st.number_input("Parturition:", min_value=0, max_value=120, value=50)
+
+# trestbps: numerical input
 Prior_C_sections_number = st.number_input("Prior_C-sections_number:", min_value=0, max_value=120, value=50)
 
 # chol: numerical input
 Uterine_surgery_number = st.number_input("Uterine_surgery_number:", min_value=0, max_value=120, value=50)
 
 # fbs: categorical selection
-Cervical_canal_length = st.selectbox("Cervical_canal_length:", min_value=0, max_value=120, value=50)
+Cervical_canal_length = st.number_input("Cervical_canal_length:", min_value=0, max_value=120, value=50)
 
 # restecg: categorical selection
 Uterine_anteroposterior_diameter_ratio = st.number_input("Uterine_anteroposterior_diameter_ratio:", min_value=0, max_value=120, value=50)
 
 # thalach: numerical input
-Placental_abnormal_vasculature_diameter = st.selectbox("Placental_abnormal_vasculature_diameter:", min_value=0, max_value=120, value=50)
+Placental_abnormal_vasculature_diameter = st.number_input("Placental_abnormal_vasculature_diameter:", min_value=0, max_value=120, value=50)
 
 # thalach: numerical input
 Placental_abnormal_vasculature_area = st.number_input("Placental_abnormal_vasculature_area:",  min_value=0, max_value=120, value=50)
 
 # exang: categorical selection
-Intraplacental_dark_T2_band_area = st.selectbox("Intraplacental_dark_T2_band_area:", min_value=0, max_value=120, value=50)
+Intraplacental_dark_T2_band_area = st.number_input("Intraplacental_dark_T2_band_area:", min_value=0, max_value=120, value=50)
 
 # Process inputs and make predictions
-feature_values = [Gestational_age,Maternal_age,Gravidity,Prior_C_sections_number,Uterine_surgery_number,Cervical_canal_length,Uterine_anteroposterior_diameter_ratio,Placental_abnormal_vasculature_diameter,Placental_abnormal_vasculature_area,Intraplacental_dark_T2_band_area]
+feature_values = [Gestational_age,Maternal_age,Gravidity,Parturition,Prior_C_sections_number,Uterine_surgery_number,Cervical_canal_length,Uterine_anteroposterior_diameter_ratio,Placental_abnormal_vasculature_diameter,Placental_abnormal_vasculature_area,Intraplacental_dark_T2_band_area]
 features = np.array([feature_values])
 
 if st.button("Predict"):
